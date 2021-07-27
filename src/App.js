@@ -6,10 +6,13 @@ import {
   HStack,
   Flex,
   theme,
+  Icon,
 } from '@chakra-ui/react';
 
 import UnitSwitcher from './components/UnitSwitcher';
 import Temperature from './components/Temperature';
+
+import { FaVuejs, FaGithub } from 'react-icons/fa';
 
 function App() {
   const [unit, setUnit] = useState('celsius');
@@ -116,15 +119,28 @@ function App() {
               href="https://github.com/indexhui/react-temperature-converter"
               isExternal
               _hover={{ color: 'gray.700', underline: 'none' }}
+              verticalAlign="middle"
+              display="inlineBlock"
             >
-              Github
+              <Icon verticalAlign="middle" as={FaGithub} />
+              <Text verticalAlign="middle" display="inline" pl="1">
+                Github
+              </Text>
             </Link>
             <Link
               href="https://indexhui.github.io/vue-temperature-converter/"
               isExternal
               _hover={{ color: 'gray.700', underline: 'none' }}
             >
-              Vue
+              <Icon verticalAlign="middle" as={FaVuejs} />
+              <Text
+                verticalAlign="middle"
+                display="inline"
+                pl="1"
+                fontSize="sm"
+              >
+                Vue
+              </Text>
             </Link>
           </HStack>
         </Flex>
