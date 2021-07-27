@@ -13,6 +13,7 @@ import UnitSwitcher from './components/UnitSwitcher';
 import Temperature from './components/Temperature';
 
 import { FaVuejs, FaGithub } from 'react-icons/fa';
+import { FiFigma } from 'react-icons/fi';
 
 function App() {
   const [unit, setUnit] = useState('celsius');
@@ -92,10 +93,13 @@ function App() {
           direction="column"
           justify="center"
           align="center"
+          shadow="lg"
         >
-          <Text fontSize="2xl">Temperature coventer</Text>
+          <Text fontSize="2xl" fontWeight="500" color="gray.700">
+            Temperature coventer
+          </Text>
           <UnitSwitcher unit={unit} handleClick={handleClick} />
-          <Text fontSize="xl">
+          <Text fontSize="xl" mt="2">
             {unit.charAt(0).toUpperCase() + unit.slice(1)}
           </Text>
           <Temperature
@@ -113,6 +117,7 @@ function App() {
           py="4"
           justify="center"
           color="gray.400"
+          shadow="lg"
         >
           <HStack spacing="24px">
             <Link
@@ -125,6 +130,21 @@ function App() {
               <Icon verticalAlign="middle" as={FaGithub} />
               <Text verticalAlign="middle" display="inline" pl="1">
                 Github
+              </Text>
+            </Link>
+            <Link
+              href="https://www.figma.com/file/qIzf18qtQX7MlTWmcLnAxt/daily-coding?node-id=43%3A8"
+              isExternal
+              _hover={{ color: 'gray.700', underline: 'none' }}
+            >
+              <Icon verticalAlign="middle" as={FiFigma} />
+              <Text
+                verticalAlign="middle"
+                display="inline"
+                pl="1"
+                fontSize="sm"
+              >
+                Figma
               </Text>
             </Link>
             <Link

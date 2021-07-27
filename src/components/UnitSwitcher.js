@@ -5,10 +5,11 @@ const UnitButton = props => {
     <Button
       w="12"
       h="12"
-      bg={props.unit === props.name ? 'white' : 'none'}
-      _focus={{ boxShadow: 'lg' }}
-      boxShadow={props.unit === props.name ? 'lg' : 'none'}
       borderRadius="50"
+      _focus={{ boxShadow: 'lg' }}
+      bg={props.unit === props.name ? 'white' : 'none'}
+      boxShadow={props.unit === props.name ? 'lg' : 'none'}
+      color={props.unit === props.name ? 'gray.700' : 'gray.500'}
       onClick={() => props.handleClick(props.name)}
     >
       {props.showName}
@@ -25,7 +26,7 @@ const UnitSwitcher = ({ unit, handleClick }) => {
         bg="gray.100"
         borderRadius="50"
         boxShadow="inner"
-        spacing="24px"
+        spacing="12px"
       >
         <UnitButton
           handleClick={handleClick}

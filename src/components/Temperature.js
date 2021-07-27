@@ -5,14 +5,16 @@ const Temperature = ({ tem, handleChange, handleBlur, unit }) => {
     <Box>
       <Input
         display="inline"
-        value={tem[unit]}
         type="number"
         w="48"
-        h="auto"
+        h="12"
         overflow="visible"
         textAlign="center"
         border="none"
         fontSize="5xl"
+        fontWeight="500"
+        color="gray.700"
+        value={tem[unit]}
         onChange={handleChange}
         onBlur={handleBlur}
       />
