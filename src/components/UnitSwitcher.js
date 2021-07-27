@@ -6,6 +6,7 @@ const UnitButton = props => {
       w="12"
       h="12"
       bg={props.unit === props.name ? 'white' : 'none'}
+      _focus={{ boxShadow: 'lg' }}
       boxShadow={props.unit === props.name ? 'lg' : 'none'}
       borderRadius="50"
       onClick={() => props.handleClick(props.name)}
