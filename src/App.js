@@ -71,7 +71,10 @@ function App() {
   useEffect(() => {
     if (tem.celsius > 28) {
       setColor('red.300');
-    } else if (tem.celsius < 28) {
+    } else if (tem.celsius < 20) {
+      setColor('blue.200');
+    } else {
+      setColor('yellow.200');
     }
   }, [tem.celsius]);
 
