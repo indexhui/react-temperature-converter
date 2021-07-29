@@ -7,7 +7,7 @@ const Temperature = ({ tem, handleChange, handleBlur, unit }) => {
         display="inline"
         type="number"
         w="48"
-        h="12"
+        h="auto"
         overflow="visible"
         textAlign="center"
         border="none"
